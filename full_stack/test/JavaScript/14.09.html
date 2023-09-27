@@ -1,0 +1,18 @@
+<p>x:</p>
+<p id="x_value">--</p>
+<p>y:</p>
+<p id="y_value"></p>
+<p>high value:</p>
+<p id="high_value"></p>
+<script>
+    var x = 13;
+    var y = 15;
+    document.getElementById("x_value").innerHTML = x;
+    document.getElementById("y_value").innerHTML = y;
+    if (x > y)
+        document.getElementById("high_value").innerHTML = x;
+    else if (x == y)
+        document.getElementById("high_value").innerHTML = "Equal";
+    else
+        document.getElementById("high_value").innerHTML = y;
+</script>

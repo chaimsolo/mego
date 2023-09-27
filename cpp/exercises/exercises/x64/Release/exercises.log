@@ -1,0 +1,9 @@
+﻿  exercise1.cpp
+C:\Users\chaim\OneDrive\מסמכים\לימוד\cpp\exercises\exercises\exercise1.cpp(125,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\chaim\OneDrive\מסמכים\לימוד\cpp\exercises\exercises\exercise1.cpp(134,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  1 of 7 functions (14.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  exercises.vcxproj -> C:\Users\chaim\OneDrive\מסמכים\לימוד\cpp\exercises\x64\Release\exercises.exe

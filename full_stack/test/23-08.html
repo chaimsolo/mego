@@ -1,0 +1,41 @@
+<head>
+    <style>
+        .box {
+            width: 49%;
+            border: solid;
+            display: inline-block;
+            vertical-align: text-top
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        @media (max-width:700px) {
+
+            /*At less of 700px width*/
+            .box {
+                width: 100%
+                    /*box width is 100% instead of 49% */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>This header is not styled with CSS</h3>
+    <div class="box">
+        <div class="content">
+            <p>This is box 1 content</p>
+            <p>This is box 1 content</p>
+            <img src="https://upload.wikimedia.org/wikipedia/he/6/6a/%D7%A1%D7%9E%D7%9C_%D7%90%D7%AA%D7%A8_%D7%94%D7%9E%D7%9B%D7%9C%D7%95%D7%9C.png" width="100%">
+        </div>
+    </div>
+    <div class="box">
+        <div class="content">
+            <p>This is box 2 content</p>
+            <p>This is box 2 content</p>
+            <img src="https://upload.wikimedia.org/wikipedia/he/6/6a/%D7%A1%D7%9E%D7%9C_%D7%90%D7%AA%D7%A8_%D7%94%D7%9E%D7%9B%D7%9C%D7%95%D7%9C.png" width="100%">
+        </div>
+    </div>
+</body>

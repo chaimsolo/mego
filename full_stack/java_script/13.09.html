@@ -1,0 +1,110 @@
+<!--<canvas id="myCanvas" width="300" height="300" style="border:1px solid;"></canvas>
+<br>
+<p>X:</p>
+<p id="x_value">--</p>
+<p>Y:</p>
+<p id="y_value">--</p>
+<script>
+    //-----------------------------------------------------
+    function TimeEventHandler() {
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, 300, 300);
+        if (y == 0)
+            height = 'down';
+        if (y == 280)
+            height = 'up';
+        if (height == 'down')
+            y += 20;
+        else
+            y -= 20;
+        if (x == 280)
+            diraction = 'left';
+        if (x == 0)
+            diraction = 'right';
+
+        if (diraction == 'right')
+            x += 20;
+        else
+            x -= 20;
+        document.getElementById("x_value").innerHTML = x;
+        document.getElementById("y_value").innerHTML = y;
+        //draw rectangular 
+        ctx.fillStyle = "black";
+        ctx.fillRect(x, y, 20, 20);
+    }
+    //-----------------------------------------------------
+    ctx = document.getElementById('myCanvas').getContext('2d');
+    var x = 100;
+    var y = 100;
+    var diraction = 'right';
+    var height = 'up'
+    setInterval(TimeEventHandler, 300);
+</script>-->
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid;"></canvas>
+<br>
+<p>X:</p>
+<p id="x_value">--</p>
+<p>Y:</p>
+<p id="y_value">--</p>
+<p>score:</p>
+<p id="score">--</p>
+<script>
+    //-----------------------------------------------------
+    function keyDownEventHandler() {
+
+        if (event.keyCode == 40)
+            direction = "down";
+        if (event.keyCode == 38)
+            direction = "up";
+        if (event.keyCode == 37)
+            direction = "left";
+        if (event.keyCode == 39)
+            direction = "right";
+
+    }
+    function TimeEventHandler() {
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, 400, 300);
+        if (direction == "right")
+            player_x += 20;
+        if (player_x > 280)
+            player_x = 0;
+        if (direction == "left")
+            player_x -= 20;
+        if (player_x < 0)
+            player_x = 280;
+        if (direction == "down")
+            player_y += 20;
+        if (player_y > 280)
+            player_y = 0;
+        if (direction == "up")
+            player_y -= 20;
+        if (player_y < 0)
+            player_y = 280;
+        if (score > 20)
+            time = 100;
+        if (player_x == x && player_y == y)
+            x = Math.floor(Math.random() * 15) * 20, y = Math.floor(Math.random() * 15) * 20, score += 10;
+        document.getElementById("x_value").innerHTML = player_x;
+        document.getElementById("y_value").innerHTML = player_y;
+        document.getElementById("score").innerHTML = score;
+        //draw rectangular 
+        ctx.fillStyle = "black";
+        ctx.fillRect(player_x, player_y, 20, 20);
+        ctx.fillStyle = "green";
+        ctx.fillRect(x, y, 20, 20);
+        //setTimeout(TimeEventHandler, time);
+
+    }
+    //-----------------------------------------------------
+    ctx = document.getElementById('myCanvas').getContext('2d');
+    var player_x = 100;
+    var player_y = 100;
+    var x = 180;
+    var y = 180;
+    var direction = "right";
+    var score = 0;
+    var time = 300;
+    document.onkeydown = keyDownEventHandler;
+    setInterval(TimeEventHandler, time);
+</script>

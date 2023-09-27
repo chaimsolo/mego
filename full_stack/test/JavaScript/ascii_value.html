@@ -1,0 +1,12 @@
+<p>keycode:</p>
+<p id="keycode_value">--</p>
+<script>
+//-------------------------------------------------
+function keyDownEventHandler() 
+{
+document.getElementById("keycode_value").innerHTML = event.keyCode;
+document.getElementById("y_value").innerHTML = y;
+}
+//-------------------------------------------------
+document.onkeydown = keyDownEventHandler;
+</script>

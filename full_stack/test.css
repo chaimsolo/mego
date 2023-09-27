@@ -1,0 +1,35 @@
+body {
+    background-image: url(https://www.tamar-flowers.co.il/wp-content/uploads/2019/08/pink-2254970_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2000px 1300px;
+}
+
+
+div{
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.795);
+    width: 300px;
+    height: 400px;
+    /*padding-right: 100px;*/
+    margin-top: 50px;
+    margin-left: 450px;
+
+}
+
+button {
+    
+    opacity: 1.0;
+    background-color: #10db10;
+    color: rgb(255, 255, 255);
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 16px;
+}
+form{
+    position: absolute;
+    margin-left: 60px;
+}
+label{
+    margin-left: 50px;
+}
