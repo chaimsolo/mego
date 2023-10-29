@@ -168,7 +168,7 @@ void main() {
 
 
 //4n --O(N)
-void main() {
+/*void main() {
 	int number, copy_number, exponent = 1;
 
 	printf("Enter a number>>>");
@@ -196,4 +196,73 @@ void main() {
 	}
 	if (exponent == 0 || exponent == 1)
 		printf("philindrom");
-}
+}*/
+
+//execises 25
+
+
+/*void main() {
+
+	int number = 1, sum = 0, i = 0, average, counter = 0;
+
+	while (i < 3) {
+		printf("Enter a number >>> ");
+		scanf_s("%d", &number);
+		if (number == 0) {
+			i++;
+		}
+		else {
+			sum += number;
+			counter++;
+		}
+	}
+	average = sum / counter;
+	printf("The average of the numbers you entered is: %d", average);
+}*/
+
+
+//exercises 26
+
+/*void main() {
+	int number1, number2, max = 0, min = 9, gap;
+	printf("Enter a number >>> ");
+	scanf_s("%d", &number1);
+	while (number1 > 0) {
+		number2 = number1 % 10;
+		number1 /= 10;
+		if (number2 > max)
+			max = number2;
+
+		if (number2 < min)
+			min = number2;
+		if (number1 == 0)
+			min = number1;
+
+
+	}
+	gap = max - min;
+	printf("The gap between the highest number and the lowest number is: %d %d %d", gap);
+}*/
+
+//exercise 27
+/*#include <limits.h>
+
+void main() {
+	int number = 0, former_number = INT_MAX, i, gap = INT_MAX, number1, former_number1;
+	for (i = 1; i < 10; i++) {
+		printf("Enter a number >>> ");
+		scanf_s("%d", &number);
+		if (former_number > number and former_number - number < gap) {
+			gap = former_number - number;
+			former_number1 = former_number;
+			number1 = number;
+		}
+		else if (number > former_number and number - former_number < gap) {
+			gap = number - former_number;
+			former_number1 = former_number;
+			number1 = number;
+		}
+		former_number = number;
+	}
+	printf("The smallest gap between two numbers is: %d, between the number %d, and the number %d", gap, number1, former_number1);
+}*/
