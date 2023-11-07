@@ -235,13 +235,11 @@ void main() {
 
 		if (number2 < min)
 			min = number2;
-		if (number1 == 0)
-			min = number1;
 
 
 	}
 	gap = max - min;
-	printf("The gap between the highest number and the lowest number is: %d %d %d", gap);
+	printf("The gap between the highest number and the lowest number is: %d %d %d", gap, max, min);
 }*/
 
 //exercise 27
