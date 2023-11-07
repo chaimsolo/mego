@@ -47,7 +47,9 @@ upper_func()'''
         print("The original sentence is: " + user_cipher)
 
 cipher()'''
-b = ["a", "b"]
-
-a = [1, b]
-print(a)
+# b = ["a", "b"]
+#
+# a = [1, b]
+# print(a)
+dict = {"a": 1, "b": 2}
+print(dict["a"])
