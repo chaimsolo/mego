@@ -1,11 +1,10 @@
 <canvas id="myCanvas" width="400" height="400" style="border:1px solid;"></canvas>
 <br>
-<!--<p>X:</p>
+<p>X:</p>
 <p id="x_value">--</p>
 <p>Y:</p>
-<p id="y_value">--</p>-->
-<p>score:</p>
-<p id="score">--</p>
+<p id="y_value">--</p>
+<img src="pacman.jpg" id="lamp" width="20" height="20">
 <script>
     //----------------------------------------------------
     function keyDownEventHandler() {
@@ -30,26 +29,28 @@
             y = 0;
         if (y == -20)
             y = 380;
-        if (x == x1 && y == y1)
-            x1 = Math.floor(Math.random() * 19) * 20, y1 = Math.floor(Math.random() * 19) * 20, score += 10;
-        if (x == x1 && y == y1)
-            score += 10;
-        document.getElementById("score").innerHTML = score;
-        ctx.fillStyle = "black";
-        ctx.fillRect(x, y, 20, 20);
-        ctx.fillStyle = "green";
-        ctx.fillRect(x1, y1, 20, 20);
+        document.getElementById("x_value").innerHTML = x;
+        document.getElementById("y_value").innerHTML = y;
+        
+        
+        
+        
+        
+        //ctx.rect(0, 0, 150, 100);
+        ctx.fillStyle = pat;
+        ctx.fill();
+        //ctx.fillStyle = "black";
+        //ctx.fillRect(x, y, 20, 20);
 
     }
     //----------------------------------------------------
     canvas = document.getElementById('myCanvas');
-    ctx = canvas.getContext('2d');
+    //ctx = canvas.getContext('2d');
+    img = document.getElementById("lamp");
+    pat = ctx.createPattern(img, "no-repeat");
+    c = document.getElementById("myCanvas");
+    ctx = c.getContext("2d");
     var x = 40;
     var y = 40;
-    var x1 = 80;
-    var y1 = 80;
-    var x2 = 380;
-    var y2 = 380;
-    var score = 0;
     document.onkeydown = keyDownEventHandler;
 </script>

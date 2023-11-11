@@ -51,5 +51,8 @@ cipher()'''
 #
 # a = [1, b]
 # print(a)
-dict = {"a": 1, "b": 2}
-print(dict["a"])
+# dict = {"a": 1, "b": 2}
+# print(dict["a"])
+a = {"a":1, "b": 2}
+b = a
+print(b)

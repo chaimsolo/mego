@@ -1,0 +1,94 @@
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid;"></canvas>
+<br>
+<!-- <img src="pacman.jpg" id="pacman" width="20" height="20"> -->
+
+<script>
+    // var img = new Image();
+    // img.src = "pacman.jpg";
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+
+    // //ctx.clearRect(0, 0, 300, 150); 
+    // //img = document.getElementById("pacman")
+    // ctx.drawImage(img, 0, 0, 20, 20)
+
+    var img = new Image();
+    img.onload = function () {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.drawImage(img, 0, 0, 20, 20);
+    }
+    img.src = "pacman.jpg";
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+    document.write(5 + 6); 
+</script>
+
+<script>
+    window.alert(5 + 6); 
+</script>
+
+<script>
+
+    var x, y, z;  // Statement 1 
+    x = 5;        // Statement 2 
+    y = 6;        // Statement 3 
+    z = x + y;    // Statement 4 
+
+
+
+    document.write("x = " + x);
+    document.write("<br/> y = " + y);
+    document.write("<br/> z = " + z);
+
+</script> -->
+
+<!-- <script>
+    a = window.prompt("enter a number");
+    document.write(a + "<br/>");
+    document.write(a * 2 + "<br/>"); 
+</script> -->
+
+<!-- <script>
+    var arr = new Array("1", 2, 3,);
+    arr.push(4);
+    arr.push(5);
+    arr.push(6, 7, 8);
+    
+    var a = new Array(arr.pop())
+    
+    document.write( a + "<br>" + arr)
+
+    // document.write(arr[0] + "<br>" + arr[1])
+
+    // for (var i = 0; i < 3; i++) 
+    // {
+    //     document.write(arr[i] + "<br>");
+    // }
+
+</script> -->
