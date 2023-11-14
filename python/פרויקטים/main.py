@@ -104,22 +104,55 @@ cipher()'''
 # print(user1.folow)
 
 
-class User:
-    def __init__(self, userID, username):
-        self.id = userID
-        self.username = username
+# class User:
+#     def __init__(self, userID, username):
+#         self.id = userID
+#         self.username = username
+#
+#         self.followers = 0
+#         self.following = 0
+#
+#     def follow(self, whats_his_name):
+#         self.following += 1
+#         whats_his_name.followers += 1
+#
+#
+# user_1_chaim = User("1234", "Chaim")
+# user_2_ben = User("5678", "Benayahu")
+#
+# user_2_ben.follow(user_1_chaim)
+# print(user_2_ben.following)
+# print(user_1_chaim.followers)
 
-        self.followers = 0
-        self.following = 0
 
-    def follow(self, whats_his_name):
-        self.following += 1
-        whats_his_name.followers += 1
+from turtle import Turtle, Screen
+from random import choice, randint
+timmy = Turtle()
+color = ["green", "yellow",  "blue", "light blue", "light green"]
+# direction = [90, 270]
+# timmy.pensize(20)
+#
+# while True:
+#     pen_direction = choice(direction)
+#     pen_color = choice(color)
+#     steps = randint(20, 150)
+#     timmy.color(pen_color)
+#     timmy.right(pen_direction)
+#     timmy.forward(steps)
 
 
-user_1_chaim = User("1234", "Chaim")
-user_2_ben = User("5678", "Benayahu")
 
-user_2_ben.follow(user_1_chaim)
-print(user_2_ben.following)
-print(user_1_chaim.followers)
+for j in range(3, 9):
+    pen_color = choice(color)
+    for i in range(j):
+        timmy.color(pen_color)
+        timmy.forward(80)
+        timmy.right(180 - (180 * (j - 2) / j))
+
+
+
+screen = Screen()
+
+screen.exitonclick()
+
+
