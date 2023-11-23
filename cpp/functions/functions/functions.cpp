@@ -204,3 +204,165 @@ void main() {
 
 
 }*/
+
+//exersices 37 goldbach
+
+/*int isPrime(int num) {
+	int i, result = (int)sqrt(num);
+
+	for (i = 2; i <= result; i++) {
+		if (num % i == 0) {
+			return 0;
+		}
+    
+	}
+	return 1;
+
+
+}
+
+void twoPrimes(int num) {
+	int i, j, w, flag;
+	int prime1, prime2;
+	for (w = 6; w <= num; w += 2) {
+		flag = 1;
+        for (i = 2; i <= num; i++) {
+			if (flag == 0) {
+				break;
+			}
+	    	if (isPrime(i) == 1){
+		    	prime1 = i;
+			    for (j = i; j <= num; j++) {
+				    if (isPrime(j) == 1) {
+					    prime2 = j;
+						if (prime1 + prime2 == w) {
+							printf("%d + %d = %d\n", prime1, prime2, w);
+							flag = 0;
+							break;
+						}
+
+
+				}
+			}
+			}
+		}
+
+	}
+}
+
+void main() {
+	int number;
+	printf("Enter a number >>> ");
+	scanf_s("%d", &number);
+	twoPrimes(number);
+}*/
+
+
+/*
+#include <stdlib.h>
+#include <time.h>
+#define SIZE  9
+
+void displayElementsInArrWithLength(int arr[], int lenghth) {
+	int i;
+
+	for (i = 0; i < lenghth; i++) {
+		printf("%d: %d \n", i + 1, arr[i]);
+	}
+}
+
+void displayElementsInArr(int arr[]) {
+	int i;
+	
+	for (i = 0; arr[i] != -1 ; i++) {
+		printf("%d: %d\n", i + 1, arr[i]);
+	}
+    
+}
+
+void main() {
+	srand(time(NULL));
+	int arr1[SIZE], i;
+	int arr2[] = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, -1 };
+
+	for (i = 0; i <= 9; i++) {
+		arr1[i] = rand() % 101;
+
+	}
+	displayElementsInArrWithLength(arr1, SIZE);
+	printf("\n\n\n\n");
+
+	displayElementsInArr(arr2);
+	printf("%d", arr2);
+}
+*/
+//exersices 41 grades
+
+#include <stdlib.h>
+#include<time.h>
+
+//define const varible
+#define SIZE 13
+
+
+void displayGrades(int grades[], int length) {
+
+	int i;
+	for (i = 0; i < length; i++) {
+		//display grade with i loation
+		printf("%d  ", grades[i]);
+	}
+	printf("\n\n");
+
+
+}
+
+//function that calcullate the grades for avarage and changing them
+
+void averageGrades(int grades[], int length) {
+
+
+	//declear vars
+	int i, sum = 0;
+	float average;
+	const int EXTRA_GRADE = 7;
+    
+	for (i = 0; i < length; i++) {
+		sum += grades[i];
+	}
+	average = sum / length;
+	
+	//checking if the averaga is less than 55
+
+	if (average < 55) {
+		for (i = 0; i < length; i++) {
+			//adding the extra number
+			grades[i] += EXTRA_GRADE;
+			//limiting the ceiling to 100
+			if (grades[i] > 100) {
+				grades[i] = 100;
+			}
+		}
+	}
+}
+
+// getting the grades by random
+void main() {
+	//using the clock for random
+	srand(time(NULL));
+
+	//declere var arr 
+	int grades[SIZE];
+	//declear var i
+	int i;
+
+	for (i = 0; i < SIZE; i++) {
+		grades[i] = rand() % 101;
+	}
+	displayGrades(grades, SIZE);
+    
+	averageGrades(grades, SIZE);
+
+	displayGrades(grades, SIZE);
+
+}

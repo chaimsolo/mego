@@ -125,34 +125,152 @@ cipher()'''
 # print(user_1_chaim.followers)
 
 
-from turtle import Turtle, Screen
-from random import choice, randint
-timmy = Turtle()
-color = ["green", "yellow",  "blue", "light blue", "light green"]
-# direction = [90, 270]
-# timmy.pensize(20)
+# from turtle import Turtle, Screen
+# from random import choice, randint
+# timmy = Turtle()
+# color = ["green", "yellow",  "blue", "light blue", "light green"]
+# # direction = [90, 270]
+# # timmy.pensize(20)
+# #
+# # while True:
+# #     pen_direction = choice(direction)
+# #     pen_color = choice(color)
+# #     steps = randint(20, 150)
+# #     timmy.color(pen_color)
+# #     timmy.right(pen_direction)
+# #     timmy.forward(steps)
 #
-# while True:
-#     pen_direction = choice(direction)
+#
+#
+# for j in range(3, 9):
 #     pen_color = choice(color)
-#     steps = randint(20, 150)
-#     timmy.color(pen_color)
-#     timmy.right(pen_direction)
-#     timmy.forward(steps)
+#     for i in range(j):
+#         timmy.color(pen_color)
+#         timmy.forward(80)
+#         timmy.right(180 - (180 * (j - 2) / j))
+#
+#
+#
+# screen = Screen()
+#
+# screen.exitonclick()
+# for i in range(1000000):
+#     print(i, end=' ')
 
+# my_tuple = (1, 2, 3)
 
+# from turtle import Turtle, Screen
+# from random import randint
+#
+# def color_mode():
+#     rgb = []
+#     for i in range(3):
+#         color = randint(1, 255)
+#         rgb.append(color)
+#     rgb = tuple(rgb)
+#     return tuple(rgb)
+#
+# tim = Turtle()
+#
+# screen = Screen()
+# tim.shape("turtle")
+# screen.colormode(255)
+# # tim.pensize(5)
+#
+# for j in range(0, 1000):
+#     if j % 4 == 0:
+#         rgb = color_mode()
+#     for i in range(4):
+#         tim.speed(99)
+#         tim.pencolor(rgb)
+#         tim.forward(10 + j)
+#         tim.right(90)
+#     tim.left(90)
+#     tim.forward(10 + j)
+#
+#
+#
+#
+#
+# screen.exitonclick()
+# import os
+# # from time import sleep
+# # space = ""
+# # for i in range(100):
+# #     sleep(4)
+# #     space += " "
+# #     print(rf'''{space} ______
+# # {space}/|_||_\`.__
+# # {space}(   _    _ _\
+# # {space}=`-(_)--(_)-'  hjw''', end='\r')
 
-for j in range(3, 9):
-    pen_color = choice(color)
-    for i in range(j):
-        timmy.color(pen_color)
-        timmy.forward(80)
-        timmy.right(180 - (180 * (j - 2) / j))
+# 20/11/2023
 
+# from turtle import Turtle, Screen
+#
+# timmy = Turtle()
+# screen = Screen()
+# screen.setup(width=1250, height=600, startx=0, starty=0)
+# user_guess = screen.textinput(title="Hello! Plleas enter your guess", prompt="which turtle will win? (enter a color)")
+# print(user_guess)
+# screen.exitonclick()
 
+# 21/11/2023
 
-screen = Screen()
+# from math import *
+#
+#
+# from turtle import Screen, Turtle
+#
+# timmy = Turtle()
+# screen = Screen()
+#
+# def w_letter():
+#     timmy.pendown()
+#     timmy.right(70)
+#     timmy.forward(50)
+#     timmy.left(140)
+#     timmy.forward(45)
+#     timmy.right(140)
+#     timmy.forward(45)
+#     timmy.left(140)
+#     timmy.forward(50)
+#     timmy.right(70)
+#     timmy.penup()
+#     timmy.forward(30)
+# def o_letter():
+#     timmy.pendown()
+#     for i in range(36):
+#         timmy.forward(4)
+#         timmy.right(10)
+#     timmy.penup()
+#     timmy.forward(30)
+#
+# def mark():
+#     timmy.pendown()
+#     timmy.right(90)
+#     timmy.forward(40)
+#     timmy.penup()
+#     timmy.pensize(5)
+#     timmy.forward(10)
+#     timmy.pendown()
+#     timmy.forward(1)
+#     timmy.penup()
+#     timmy.backward(50)
+#     timmy.left(90)
+#     timmy.forward(50)
+# w_letter()
+# o_letter()
+# w_letter()
+# mark()
+#
+#
+#
+# screen.exitonclick()
 
-screen.exitonclick()
-
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+d = c * 2
+print(d)
 

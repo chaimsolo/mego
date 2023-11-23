@@ -18,13 +18,16 @@ while quistion[0] == "y":
     def devision(number1, number2):
         return number1 / number2
 
+    def calculator(n1, n2, func):
+        return func(n1, n2)
+
     if numbers[1] == "+":
-        result = addition(number1, number2)
+        result = calculator(number1, number2, addition)
     elif numbers[1] == "-":
-        result = substraction(number1, number2)
+        result = calculator(number1, number2, substraction)
     elif numbers[1] == "*":
-        result = multiplication(number1, number2)
+        result = calculator(number1, number2, multiplication)
     elif numbers[1] == "/":
-        result = devision(number1, number2)
+        result = calculator(number1, number2, substraction)
 
     quistion = input(f"The tesult is: {result} \n\nwould you like to calculate another thing? ")
