@@ -298,7 +298,7 @@ void main() {
 */
 //exersices 41 grades
 
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include<time.h>
 
 //define const varible
@@ -363,6 +363,66 @@ void main() {
     
 	averageGrades(grades, SIZE);
 
-	displayGrades(grades, SIZE);
+`	displayGrades(grades, SIZE);
+
+}*/
+
+//exersices 38
+
+/*#define SIZE 13
+
+//replace the numbers function
+void replaceNumbers(int arr[], int length) {
+	//decleare vars
+	int i;
+	//changing order
+	for (i = 12; i >= 0; i--) {
+		//printing new order
+		printf("%d: %d\n", 13 - i, arr[i]);
+	}
+	
+}
+
+//creating arr
+void main() {
+	//declear var
+	int arr[] = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26 };
+	//calling to function
+	replaceNumbers(arr, SIZE);
+}*/
+
+
+//exersices 39
+
+//declear const
+/*#define SIZE 13
+//function for sidplaing arr
+void displayArr(int arr[], int length) {
+	int i;
+	for (i = 0; i < length; i++) {
+		printf("%d: %d\n", i + 1, arr[i]);
+	}
+}
+//changing places
+void changingPlaces(int arr[], int length) {
+	//declear vars
+	int i, store;
+	//changing the place by for loop
+	for (i = 0; i < length/2; i++) {
+		store = arr[i];
+		arr[i] = arr[length - i -1];
+		arr[length - i -1] = store;
+	}
 
 }
+
+void main() {
+	int arr[SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+
+	displayArr(arr, SIZE);
+
+	changingPlaces(arr, SIZE);
+
+	displayArr(arr, SIZE);
+
+	}*/

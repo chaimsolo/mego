@@ -211,15 +211,15 @@ cipher()'''
 # timmy = Turtle()
 # screen = Screen()
 # screen.setup(width=1250, height=600, startx=0, starty=0)
-# user_guess = screen.textinput(title="Hello! Plleas enter your guess", prompt="which turtle will win? (enter a color)")
-# print(user_guess)
-# screen.exitonclick()
-
-# 21/11/2023
-
-# from math import *
+# # user_guess = screen.textinput(title="Hello! Plleas enter your guess", prompt="which turtle will win? (enter a color)")
+# # print(user_guess)
+# # screen.exitonclick()
 #
-#
+# # # 21/11/2023
+# #
+# # # from math import *
+# # #
+# #
 # from turtle import Screen, Turtle
 #
 # timmy = Turtle()
@@ -246,6 +246,18 @@ cipher()'''
 #     timmy.penup()
 #     timmy.forward(30)
 #
+# def a_letter():
+#     timmy.pendown()
+#     timmy.right(110)
+#     timmy.forward(50)
+#     timmy.backward(50)
+#     timmy.left(40)
+#     timmy.forward(25)
+#     timmy.right(110)
+#     timmy.forward(18)
+#     timmy.backward(18)
+#     timmy.left(110)
+#     timmy.forward(25)
 # def mark():
 #     timmy.pendown()
 #     timmy.right(90)
@@ -259,18 +271,90 @@ cipher()'''
 #     timmy.backward(50)
 #     timmy.left(90)
 #     timmy.forward(50)
-# w_letter()
-# o_letter()
-# w_letter()
+#
+# a_letter()
+# # w_letter()
+# # o_letter()
+# # w_letter()
 # mark()
-#
-#
+
+
 #
 # screen.exitonclick()
+# #
+# # a = [1, 2, 3]
+# # b = [4, 5, 6]
+# # c = a + b
+# # d = c * 2
+# # print(d)
+#
+# lettres = "abcdefg"
+# dic = 123_456
+# print(lettres[-4:0:])
+# def a(a, b):
+#     return a + b
+# # a(1)
+# a = 2.12345
+# b = "{0:.2f} 2.123  12345 {1}".format(a, 1)
+# print(b)
+#
+# for i in range(1, 13):
+#     print("no. {:4}, {:4}".format(i, i**2))
+# line = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
+# print(f"{line[0]}\n{line[1]}\n{line[2]}")
+# flag = 1
+# while flag:
+#     x_or_0 = input("what do you want to paint? (x or 0) >>> ")
+#     choice_line = int(input("Enter the line number Where you like to  located your choice >>> ")) - 1
+#     choice_row = int(input("Enter the row number Where you like to  located your choice >>> ")) - 1
+#     line[choice_line][choice_row] = x_or_0
+#     print(f"{line[0]}\n{line[1]}\n{line[2]}")
+#     for i in range(3):
+#         if line[i][0] == line[i][1] == line[i][2] and line[i][2] != "-" or line[0][i] == line[1][i] == line[2][i] and line[2][i] != "-"\
+#                 or line[0][0] == line[1][1] == line[2][2] and line[2][2] != "-" or line[0][2] == line[1][1] == line[2][0] and line[2][0] != "-":
+#             print("won")
+#             flag = 0
+#             break
 
-a = [1, 2, 3]
-b = [4, 5, 6]
-c = a + b
-d = c * 2
-print(d)
+
+
+# def orgeniz_numbers(num):
+#     store = []
+#     i = 1
+#     while num:
+#         store
+#     return store
+#
+# num_a = int(input("Enter a number >>>"))
+# num_b = int(input("Enter an other number >>>"))
+# while num_a:
+#
+#
+# num_a = orgeniz_numbers(num_a)
+# num_b = orgeniz_numbers(num_b)
+# print(num_a)
+# print(num_b)
+
+# print("hello {0:.2f}".format( 2.2222))
+# a = "abcd"
+# print(a.upper())
+
+# 28/11/2023
+# data = "a", "b", "c"
+# x, y, z = data
+# n_data = data[::-1][::-1]
+# print(data)
+# print(n_data)
+# a = "abc"
+# a[0] = "v"
+# print(a)
+#
+# letters = "abcdefghijklmnopqrstuvwxyz"
+# print(letters[16:13:-1])
+# print(letters[4::-1])
+# print(letters[:-9:-1])
+
+# a = "abcd"
+# for i in enumerate("abcd"):
+#     print(i[0] + 1, i[1])
 
