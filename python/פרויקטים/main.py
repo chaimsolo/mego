@@ -1,4 +1,4 @@
-#print(ord(""))
+# print(ord(""))
 
 '''def upper_func():
     i = 1
@@ -16,7 +16,6 @@
     print(upper_sentence)
 
 upper_func()'''
-
 
 '''def cipher():
     user_cipher = ""
@@ -317,7 +316,6 @@ cipher()'''
 #             break
 
 
-
 # def orgeniz_numbers(num):
 #     store = []
 #     i = 1
@@ -350,11 +348,114 @@ cipher()'''
 # print(a)
 #
 # letters = "abcdefghijklmnopqrstuvwxyz"
-# print(letters[16:13:-1])
+# print(letters[14:17:-1])
 # print(letters[4::-1])
 # print(letters[:-9:-1])
 
 # a = "abcd"
-# for i in enumerate("abcd"):
-#     print(i[0] + 1, i[1])
+# for i in enumerate({"a": "letter a", "b": "letter b"}):
+#     print(i)
+
+# class User:
+#     def __init__(self, user, username):
+#         self.id = user
+#         self.username = username
+#         # default values
+#         self.followers = 0
+#         self.following = 0
+#
+#     def follow(self, whats_his_name):
+#         self.following += 1
+#         whats_his_name.followers += 1
+#
+#
+# user_1_chaim = User("1234", "Chaim")
+# user_2_ben = User("5678", "Benayahu")
+#
+# user_2_ben.follow(user_1_chaim)
+# print(user_2_ben.following)
+# print(user_1_chaim.followers)
+
+# # join method
+# dict = {"a":"letter a", "b": "letter b"}
+# print("".join(dict))
+
+# # ljust method
+# a = "banana"
+# print(a.ljust(50, "5"), "is the best food")
+
+# # lower method
+# a = "HELLO"
+# print(a.lower())
+
+# # lstrip method
+# txt = "       banana     "
+# print(txt.lstrip(), "is the best food")
+#
+# # maketrans and translate methods
+# txt = "hello  Dan"
+# x = "Dan"
+# y = "David"
+# table = str.maketrans(x, y)
+# print(txt.translate(table))
+
+# # shows ascii value of octal base
+# txt = "\107"
+# print(txt)
+
+# # shows ascii value of hex base
+# txt = "\x79"
+# print(txt)
+
+# # \f
+# txt = "\fhello\f"
+# print(txt)
+
+# # how to clear the console screen (doesn't work on the pycharm console)
+# import os
+# import time
+# print("avi")
+# time.sleep(2)
+# os.system("cls")
+# time.sleep(2)
+# print("shlomo")
+
+# # checking the name of 'set' varible
+# a = {1, 2}
+# print(type(a))
+
+# # class that gets a serial number of the objects
+# class Number:
+#     num_of_objects = 0
+#     def __init__(self):
+#         Number.num_of_objects += 1
+#         self.id = Number.num_of_objects
+#     def printingNumberOfObject(self):
+#         print(f"The serial number of object is: {self.id}")
+#
+
+# list = []
+# for i in range(10):
+#     number = Number()
+#     list.append(number)
+# for i in range(10):
+#     list[i].printingNumberOfObject()
+# print(isinstance(number, Number))
+
+# a = ["a", "b"]
+# print(id(a))
+# b = "c", "d"
+# a [1] = 9
+# print(id(a))
+# print(a)
+
+
+# 03/12/2023
+# my_set = [1, 4, 2, 6]
+# my_set = set(my_set)
+# my_set.add(3)
+# cars = ["toyote", "mazda"]
+# f = open("txt.txt", 'r', encoding="utf-8")
+# for u in f:
+#     print(u, )
 

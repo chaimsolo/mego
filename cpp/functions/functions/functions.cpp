@@ -296,76 +296,7 @@ void main() {
 	printf("%d", arr2);
 }
 */
-//exersices 41 grades
 
-/*#include <stdlib.h>
-#include<time.h>
-
-//define const varible
-#define SIZE 13
-
-
-void displayGrades(int grades[], int length) {
-
-	int i;
-	for (i = 0; i < length; i++) {
-		//display grade with i loation
-		printf("%d  ", grades[i]);
-	}
-	printf("\n\n");
-
-
-}
-
-//function that calcullate the grades for avarage and changing them
-
-void averageGrades(int grades[], int length) {
-
-
-	//declear vars
-	int i, sum = 0;
-	float average;
-	const int EXTRA_GRADE = 7;
-    
-	for (i = 0; i < length; i++) {
-		sum += grades[i];
-	}
-	average = sum / length;
-	
-	//checking if the averaga is less than 55
-
-	if (average < 55) {
-		for (i = 0; i < length; i++) {
-			//adding the extra number
-			grades[i] += EXTRA_GRADE;
-			//limiting the ceiling to 100
-			if (grades[i] > 100) {
-				grades[i] = 100;
-			}
-		}
-	}
-}
-
-// getting the grades by random
-void main() {
-	//using the clock for random
-	srand(time(NULL));
-
-	//declere var arr 
-	int grades[SIZE];
-	//declear var i
-	int i;
-
-	for (i = 0; i < SIZE; i++) {
-		grades[i] = rand() % 101;
-	}
-	displayGrades(grades, SIZE);
-    
-	averageGrades(grades, SIZE);
-
-`	displayGrades(grades, SIZE);
-
-}*/
 
 //exersices 38
 
@@ -396,7 +327,7 @@ void main() {
 
 //declear const
 /*#define SIZE 13
-//function for sidplaing arr
+//function for displaing arr
 void displayArr(int arr[], int length) {
 	int i;
 	for (i = 0; i < length; i++) {
@@ -426,3 +357,87 @@ void main() {
 	displayArr(arr, SIZE);
 
 	}*/
+
+	//exersices 41 grades
+
+	/*#include <stdlib.h>
+	#include<time.h>
+
+	//define const varible
+	#define SIZE 13
+
+
+	void displayGrades(int grades[], int length) {
+
+		int i;
+		for (i = 0; i < length; i++) {
+			//display grade with i loation
+			printf("%d  ", grades[i]);
+		}
+		printf("\n\n");
+
+
+	}
+
+	//function that calcullate the grades for avarage and changing them
+
+	void averageGrades(int grades[], int length) {
+
+
+		//declear vars
+		int i, sum = 0;
+		float average;
+		const int EXTRA_GRADE = 7;
+
+		for (i = 0; i < length; i++) {
+			sum += grades[i];
+		}
+		average = sum / length;
+
+		//checking if the averaga is less than 55
+
+		if (average < 55) {
+			for (i = 0; i < length; i++) {
+				//adding the extra number
+				grades[i] += EXTRA_GRADE;
+				//limiting the ceiling to 100
+				if (grades[i] > 100) {
+					grades[i] = 100;
+				}
+			}
+		}
+	}
+
+	// getting the grades by random
+	void main() {
+		//using the clock for random
+		srand(time(NULL));
+
+		//declere var arr
+		int grades[SIZE];
+		//declear var i
+		int i;
+
+		for (i = 0; i < SIZE; i++) {
+			grades[i] = rand() % 101;
+		}
+		displayGrades(grades, SIZE);
+
+		averageGrades(grades, SIZE);
+
+	`	displayGrades(grades, SIZE);
+
+	}*/
+
+
+//exersices 40 
+
+//function that gets the arr and return the highest number
+int highestNumber(int arr[]) {
+	//declear vars
+	int i, highestNumber;
+	//finding the highest number
+
+
+}
+//the main that gets the number and display them
