@@ -1,4 +1,4 @@
-<canvas id="myCanvas" width="400" height="400" style="border:1px solid;"></canvas>
+<canvas id="myCanvas" width="400" height="400" style="border:5px solid;"></canvas>
 <br>
 <p>score:</p>
 <p id="score">--</p>
@@ -19,19 +19,35 @@
     function TimeEventHandler() {
         ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, 500, 500);
-        if (direction == "right")
+        // for (i = 20; i <= 400; i += 40){
+        //     ctx.fillStyle = "blue";
+        //     ctx.fillRect(0, i, 400, 20);
+        //     ctx.fillStyle = 'white';
+        //     ctx.fillRect(i, i, 20, 400);
+        //     ctx.fillRect(300 - i, i, 20, 400)
+        //     if (player_y == )
+        // }
+        ctx.fillStyle = "blue";
+        for (i = 0; i < 20; i++) {
+            for (j = 0; j < 20; j++) {
+                ctx.fillRect(i * 20, j * 20, locy[j][i] * 20, locy[j][i] * 20);
+            }
+
+
+        }
+        if (direction == "right" && locy[player_y / 20][(player_x + 20) / 20] == 0)
             player_x += 20;
         if (player_x > 380)
             player_x = 0;
-        if (direction == "left")
+        if (direction == "left" && locy[player_y / 20][(player_x - 20) / 20] == 0)
             player_x -= 20;
         if (player_x < 0)
             player_x = 380;
-        if (direction == "down")
+        if (direction == "down" && locy[(player_y + 20) / 20][player_x / 20] == 0)
             player_y += 20;
         if (player_y > 380)
             player_y = 0;
-        if (direction == "up")
+        if (direction == "up" && locy[(player_y - 20) / 20][player_x / 20] == 0)
             player_y -= 20;
         if (player_y < 0)
             player_y = 380;
@@ -97,6 +113,29 @@
     }
     //-----------------------------------------------------
     ctx = document.getElementById('myCanvas').getContext('2d');
+    var locy = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1],
+        [0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+        [0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+        [0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ]
+    var i = 20
     var player_x = 100;
     var player_y = 100;
     var chaser_x1 = 220;

@@ -16,6 +16,7 @@
     print(upper_sentence)
 
 upper_func()'''
+import txt
 
 '''def cipher():
     user_cipher = ""
@@ -458,4 +459,176 @@ cipher()'''
 # f = open("txt.txt", 'r', encoding="utf-8")
 # for u in f:
 #     print(u, )
+# big_list = []
+# for i in range(9):
+#     list =[]
+#     for j in range(3):
+#         list.append(i)
+#     big_list.append(list)
+# print(big_list)
+# import random
+# a = [1, 2, 3]
+# b = random.shuffle(a)
+# print(b)
+
+# # car raiding
+# import os
+# import time
+# space = ""
+# a = "#"
+# for i in range(1, 1000):
+#     space += " "
+#     a += "#"
+#     print(rf'''
+# {space}  ______
+# {space} /|_||_\`.__
+# {space}(   _    _ _\
+# {a}=`-(_)--(_)-' ''')
+#     time.sleep(0.05)
+#     os.system("cls")
+
+# # example to writing text file
+# f = open("t.txt", "w", encoding="utf-8")
+# f.write("abc\n" + "def")
+# f.close()
+
+
+# def get(d, key):
+#     try:
+#         d[key]
+#     except KeyError:
+#         print("not in dictionary")
+# dict = {"a": 1, "b": 2}
+# get(dict, "a")
+# while True:
+#     try:
+#         a = int(input("Enter a number >>> "))
+#         break
+#     except:
+#         print("Not a number")
+#         break
+#     else:
+#         print("This is a number.")
+#         break
+#     finally:
+#         print("hello!")
+# print("EEEEE")
+# def divid(a, b):
+#     try:
+#         return a / b
+#     except ZeroDivisionError as err:
+#         print("dont divid in zero")
+#         print(err)
+#     except TypeError as err:
+#         print("can't' divid str")
+#         print(err)
+# print(divid(1, 2))
+# divid(1, 0)
+# divid("a", 2)
+
+# def divid(a, b):
+#     try:
+#         return a / b
+#     except(ZeroDivisionError, TypeError) as err:
+#         print(err)
+# print(divid(1, 2))
+# print(divid(1, 0))
+# print(divid(1, "a"))
+
+# a = {"a":1, "b": 2}
+# b = list(a)
+# print(b)
+
+# # how to display keys and values in dictionary in for loop
+# a = {"a": 1, "b": 2}
+# for i, val in a.items():
+#     print(i, val)
+
+# # isinstance
+# class PrintingHello:
+#      hello = print("hello")
+# hello = PrintingHello()
+# print(isinstance(hello, PrintingHello))
+# print(isinstance(1.0, (str, float, list)))
+
+# # format string in oop
+# class Car:
+#     count = 1
+#     def __init__(self,name, price, color):
+#         self.price = price
+#         self.color = color
+#         self.name = name
+#         Car.count += 1
+#         self.count = Car.count
+#
+#
+# toyota = Car("toyota", 160000, "white")
+# subaru = Car("subaru", 200000, "green")
+# subaru.is_sun_roof = False
+# print(toyota.count)
+# print(subaru.count)
+# print(vars(toyota))
+# print(toyota.__dict__)
+#
+# print("The price of the {0.color} {0.name} is {0.price}\nThe price of the {1.color} {1.name} is {1.price} ".format(toyota, subaru))
+
+
+# example to printing of time
+import datetime
+import pytz
+
+class Account:
+    ''' Simple account class with balance '''
+    def __init__(self, name, balance):
+        self._name = name
+        self.__balance = balance
+        self.transaction_list = []
+        print("Account created for " + self._name)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            self.transaction_list.append((pytz.utc.localize(datetime.datetime.utcnow()), amount))
+
+    def withdraw(self, amount):
+        if self.__balance >= amount:  # to avoid being a millionaire...
+            self.__balance -= amount
+        else:
+            print("The amount must be <= than the current balance, which is: {}".format(self.__balance))
+
+    def show_balance(self):
+        print("Balance is: {}".format(self.__balance))
+
+    def show_transactions(self):
+        for date, amount in self.transaction_list:
+            if amount > 0:
+                tran_type = "deposited"
+            else:
+                tran_type = "withdrawn"
+                amount *= -1
+            print("{:6} {} on {} (local time was {})".format(amount, tran_type, date, date.astimezone()))
+
+
+chaim = Account("Chaim", 0)
+chaim.deposit(100)
+chaim.show_transactions()
+chaim.show_balance()
+print(vars(chaim))
+
+
+# # example to static method
+# class Hello:
+#
+#     @staticmethod
+#     def _sayHello():
+#         a = input("what is your name?")
+#         print("hello {}".format(a))
+#     def __init__(self):
+#         self.b = 12
+#
+# chaim = Hello()
+# print(chaim.b)
+# chaim._sayHello()
+
+
 

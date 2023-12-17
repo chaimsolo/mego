@@ -23,7 +23,7 @@ choose the type of coffe you want to order {start_menu.get_items()} >>> ''')
 
         making_coffee.is_resource_sufficient(coffee_object)
 
-        print(f'''The price for {coffee_object.name}  is: {coffee_object.cost} ''')
+        print(f'''The price for {coffee_object._name}  is: {coffee_object.cost} ''')
 
         if making_money.make_payment(coffee_object.cost) == True:
             making_coffee.make_coffee(coffee_object)

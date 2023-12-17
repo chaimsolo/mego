@@ -358,7 +358,40 @@ void main() {
 
 	}*/
 
-	//exersices 41 grades
+
+	//exersices 40 
+/*
+
+#include<limits.h>
+#define size 5
+
+
+//function that gets the arr and return the highest number
+int highestNumber(int arr[], int length) {
+	//declear vars
+	int i, highestNumber = INT_MIN;
+	//finding the highest number
+	for (i = 0; i < length; i++) {
+		if (arr[i] > highestNumber) {
+			highestNumber = arr[i];
+		}
+	}
+	return highestNumber;
+}
+//the main that gets the number and display them
+void main() {
+	int arrNumbers[size], i;
+	//gettind numbers in the arr by input
+	for (i = 0; i < size; i++) {
+		printf("Enter a number >>> ");
+		scanf_s("%d", &arrNumbers[i]);
+	}
+	printf("The highest number that you have enterd is: %d", highestNumber(arrNumbers, size));
+}
+*/
+
+
+//exersices 41 grades
 
 	/*#include <stdlib.h>
 	#include<time.h>
@@ -429,15 +462,31 @@ void main() {
 
 	}*/
 
+// exersices 42
+#include <stdlib.h>
+#include <time.h>
+#define size 5
 
-//exersices 40 
+void printingArr(int arr[], int length) {
+	// declear vars
+	int i, number;
+	//reading the numbers
+	for (i = 0; i < length; i++) {
+		//saving the number and printing it
+		number = arr[i];
+		printf("%d", number);
+	}
+}
 
-//function that gets the arr and return the highest number
-int highestNumber(int arr[]) {
-	//declear vars
-	int i, highestNumber;
-	//finding the highest number
-
+void main() {
+	srand(time(NULL));
+	int arr[size];
+	int i;
+	for (i = 0; i < size; i++) {
+		arr[i] = rand() % 11 + 1;
+		printf("%d", arr[i]);
+	}
+	printf("\n");
+	printingArr(arr, size);
 
 }
-//the main that gets the number and display them
