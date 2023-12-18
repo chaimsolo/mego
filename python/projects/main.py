@@ -542,7 +542,8 @@ cipher()'''
 # # how to display keys and values in dictionary in for loop
 # a = {"a": 1, "b": 2}
 # for i, val in a.items():
-#     print(i, val)
+#      print(i, val)
+# print(a.items())
 
 # # isinstance
 # class PrintingHello:
@@ -573,47 +574,48 @@ cipher()'''
 # print("The price of the {0.color} {0.name} is {0.price}\nThe price of the {1.color} {1.name} is {1.price} ".format(toyota, subaru))
 
 
-# example to printing of time
-import datetime
-import pytz
-
-class Account:
-    ''' Simple account class with balance '''
-    def __init__(self, name, balance):
-        self._name = name
-        self.__balance = balance
-        self.transaction_list = []
-        print("Account created for " + self._name)
-
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
-            self.transaction_list.append((pytz.utc.localize(datetime.datetime.utcnow()), amount))
-
-    def withdraw(self, amount):
-        if self.__balance >= amount:  # to avoid being a millionaire...
-            self.__balance -= amount
-        else:
-            print("The amount must be <= than the current balance, which is: {}".format(self.__balance))
-
-    def show_balance(self):
-        print("Balance is: {}".format(self.__balance))
-
-    def show_transactions(self):
-        for date, amount in self.transaction_list:
-            if amount > 0:
-                tran_type = "deposited"
-            else:
-                tran_type = "withdrawn"
-                amount *= -1
-            print("{:6} {} on {} (local time was {})".format(amount, tran_type, date, date.astimezone()))
-
-
-chaim = Account("Chaim", 0)
-chaim.deposit(100)
-chaim.show_transactions()
-chaim.show_balance()
-print(vars(chaim))
+# # example to printing of time
+# import datetime
+# import pytz
+#
+#
+# class Account:
+#     ''' Simple account class with balance '''
+#     def __init__(self, name, balance):
+#         self._name = name
+#         self.__balance = balance
+#         self.transaction_list = []
+#         print("Account created for " + self._name)
+#
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             self.transaction_list.append((pytz.utc.localize(datetime.datetime.utcnow()), amount))
+#
+#     def withdraw(self, amount):
+#         if self.__balance >= amount:  # to avoid being a millionaire...
+#             self.__balance -= amount
+#         else:
+#             print("The amount must be <= than the current balance, which is: {}".format(self.__balance))
+#
+#     def show_balance(self):
+#         print("Balance is: {}".format(self.__balance))
+#
+#     def show_transactions(self):
+#         for date, amount in self.transaction_list:
+#             if amount > 0:
+#                 tran_type = "deposited"
+#             else:
+#                 tran_type = "withdrawn"
+#                 amount *= -1
+#             print("{:6} {} on {} (local time was {})".format(amount, tran_type, date, date.astimezone()))
+#
+#
+# chaim = Account("Chaim", 0)
+# chaim.deposit(100)
+# chaim.show_transactions()
+# chaim.show_balance()
+# print(vars(chaim))
 
 
 # # example to static method
@@ -630,5 +632,115 @@ print(vars(chaim))
 # print(chaim.b)
 # chaim._sayHello()
 
+# # example for using date and time
+# import datetime
+#
+# now = datetime.datetime.now()
+# print(now)
+# print(now.strftime("%Y"))
+# print(datetime.datetime.now().strftime("%d\\%m\\%y.   %H:%M"))
 
+
+# # example for list comprehension to do print together with for loop
+# print([i for i in range(100) if i % 2 == 0])
+
+
+# # example for the sum function
+# numbers = [1, 2, 3]
+# print(sum(numbers))
+
+# # example for for loop in three values inside the tuple
+# a = (1, 2, 0), (3, 4, 1), (5, 6, 2)
+# print(a[0][2])
+# for i, j, k in a:
+#     print(i, j, k)
+
+# # 18/12/2023
+# #example to argument with difult
+# def myFunction(number=0):
+#     return number
+# print(myFunction(33)) # will print 33
+
+# # example how to print the var name together with the value
+# a = 40
+# print(f"{a=}")
+
+
+# # example for proporties methode
+# class Song:
+#     def __init__(self, title, artist, duration):
+#         self.title = title
+#         self.artist = artist
+#         self.duration = duration
+#
+#     def get_title(self):
+#         return self.title
+#
+#     name = property(get_title)
+#
+#     def __str__(self):
+#         print(1)
+#         return str(vars(self))[1:-1].replace("'", "")
+#
+# s = Song("baggin", "eminem", "1:35")
+# print(s)
+# print(s.name)
+# print(s.get_title())
+#TODO לבדוק מה ההבדל בין פס אחד לשני פסים
+
+
+# # example how to use function singture without parenicis
+# def func(y):
+#     return y
+# def func2(num):
+#     return num(3) * 2
+# print(func2(func))
+
+# # example for random creating by clock
+# import datetime
+# time = datetime.datetime.now()
+# random = int(time.strftime("%S")) % 10 + 1
+# print(random)
+
+# # example for properties with two arguments
+# class Player(object):
+#     def __init__(self, name):
+#         self.name = name
+#         self._lives = 3
+#         self._level = 1
+#         self._score = 0
+#
+#     def _set_level(self, level):
+#         if level >= 0:
+#             self._level = level + 1
+#             self._score = level * 1000
+#
+#     def _get_scores(self):
+#         return self._score
+#
+#     def _get_lives(self):
+#         return self._lives
+#
+#     def _set_lives(self, lives):
+#         if lives >= 0:
+#             self._lives = lives
+#         else:
+#             print("Lives cannot be negative")
+#             self._lives = 0
+#
+#
+#
+#     lives = property(_get_lives, _set_lives)
+#
+#     level = property(_get_scores, _set_level)
+#     def __str__(self):
+#         return "Name: {0.name}, Lives: {0.lives}, level: {0._level}, Score: {0._score}".format(self)
+#
+# tim = Player("Tim")
+# # tim._lives = 2
+# tim.lives = 3
+# print(tim.lives)
+# tim.level += 10
+#
+# print(tim)
 

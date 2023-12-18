@@ -16,6 +16,8 @@
             direction = "right";
 
     }
+
+
     function TimeEventHandler() {
         ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, 500, 500);
@@ -27,42 +29,41 @@
         //     ctx.fillRect(300 - i, i, 20, 400)
         //     if (player_y == )
         // }
-        ctx.fillStyle = "blue";
+        var colors = ["white", "blue", "green"]
         for (i = 0; i < 20; i++) {
             for (j = 0; j < 20; j++) {
-                ctx.fillRect(i * 20, j * 20, locy[j][i] * 20, locy[j][i] * 20);
+                ctx.fillStyle = colors[locy[j][i]];
+                ctx.fillRect(i * 20, j * 20, 20, 20);
             }
-
-
         }
-        if (direction == "right" && locy[player_y / 20][(player_x + 20) / 20] == 0)
-            player_x += 20;
-        if (player_x > 380)
-            player_x = 0;
-        if (direction == "left" && locy[player_y / 20][(player_x - 20) / 20] == 0)
-            player_x -= 20;
-        if (player_x < 0)
-            player_x = 380;
-        if (direction == "down" && locy[(player_y + 20) / 20][player_x / 20] == 0)
-            player_y += 20;
-        if (player_y > 380)
-            player_y = 0;
-        if (direction == "up" && locy[(player_y - 20) / 20][player_x / 20] == 0)
-            player_y -= 20;
-        if (player_y < 0)
-            player_y = 380;
-        if (player_x == x && player_y == y)
-            x = Math.floor(Math.random() * 20) * 20, y = Math.floor(Math.random() * 20) * 20, score += 10;
-        document.getElementById("score").innerHTML = score;
-        //draw rectangular 
-        ctx.fillStyle = "black";
-        ctx.fillRect(player_x, player_y, 20, 20);
-        ctx.fillStyle = "green";
-        ctx.fillRect(x, y, 20, 20);
-        ctx.fillStyle = "yellow";
-        ctx.fillRect(chaser_x1, chaser_y1, 20, 20)
-        ctx.fillStyle = "yellow";
-        ctx.fillRect(chaser_x2, chaser_y2, 20, 20)
+        // if (direction == "right" && locy[player_y / 20][(player_x + 20) / 20] == 0)
+        //     player_x += 20;
+        // if (player_x > 380)
+        //     player_x = 0;
+        // if (direction == "left" && locy[player_y / 20][(player_x - 20) / 20] == 0)
+        //     player_x -= 20;
+        // if (player_x < 0)
+        //     player_x = 380;
+        // if (direction == "down" && locy[(player_y + 20) / 20][player_x / 20] == 0)
+        //     player_y += 20;
+        // if (player_y > 380)
+        //     player_y = 0;
+        // if (direction == "up" && locy[(player_y - 20) / 20][player_x / 20] == 0)
+        //     player_y -= 20;
+        // if (player_y < 0)
+        //     player_y = 380;
+        // if (player_x == x && player_y == y)
+        //     x = Math.floor(Math.random() * 20) * 20, y = Math.floor(Math.random() * 20) * 20, score += 10;
+        // document.getElementById("score").innerHTML = score;
+        // //draw rectangular 
+        // ctx.fillStyle = "black";
+        // ctx.fillRect(player_x, player_y, 20, 20);
+        // ctx.fillStyle = "green";
+        // ctx.fillRect(x, y, 20, 20);
+        // ctx.fillStyle = "yellow";
+        // ctx.fillRect(chaser_x1, chaser_y1, 20, 20)
+        // ctx.fillStyle = "yellow";
+        // ctx.fillRect(chaser_x2, chaser_y2, 20, 20)
 
 
         //setTimeout(TimeEventHandler, time);
@@ -118,7 +119,7 @@
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
