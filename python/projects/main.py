@@ -16,7 +16,6 @@
     print(upper_sentence)
 
 upper_func()'''
-import txt
 
 '''def cipher():
     user_cipher = ""
@@ -446,7 +445,7 @@ cipher()'''
 # a = ["a", "b"]
 # print(id(a))
 # b = "c", "d"
-# a [1] = 9
+# a[1] = 9
 # print(id(a))
 # print(a)
 
@@ -686,7 +685,7 @@ cipher()'''
 # print(s)
 # print(s.name)
 # print(s.get_title())
-#TODO לבדוק מה ההבדל בין פס אחד לשני פסים
+# TODO לבדוק מה ההבדל בין פס אחד לשני פסים
 
 
 # # example how to use function singture without parenicis
@@ -694,6 +693,7 @@ cipher()'''
 #     return y
 # def func2(num):
 #     return num(3) * 2
+#
 # print(func2(func))
 
 # # example for random creating by clock
@@ -743,4 +743,173 @@ cipher()'''
 # tim.level += 10
 #
 # print(tim)
+
+# # example for replace method
+# a = "hello world"
+# a = a.replace("hello", "hi")
+# print(a)
+
+# 19/12/2023
+
+# # the diferent between 1 underscore to 2 underscores (menglind) and also an example for repr method
+# class MyClass:
+#     def __init__(self):
+#        self._secret_value = 10
+#        self.__very_secret_value = 20
+#     def getSecretValue(self):
+#         return self._secret_value
+#
+#     def getVerySecretValue(self):
+#         return self.__very_secret_value
+#
+#     # def get_very_secret_value_in_a_special_way(self):
+#     #     return self._MyClass__very_secret_value
+#
+#     def __repr__(self):
+#         return f"MyClass({self._secret_value})"
+#     def __str__(self):
+#         return "hello"
+#
+# obj = MyClass()
+# print(obj._secret_value)
+# # print(obj.__very_secret_value)
+# print(obj.getVerySecretValue())
+# print(obj.getSecretValue())
+# # print(obj.get_very_secret_value_in_a_special_way())
+# obj._secret_value = 40
+# print(obj._secret_value)
+# # obj._MyClass__very_secret_value = 100
+# # print(obj.get_very_secret_value_in_a_special_way())
+# print(vars(obj))
+#
+# obj = str(obj)
+# print(obj)
+#
+# print(obj._secret_value) # will create an error
+
+
+# # examples for unpacking, (or multiple assignment)
+# a, b, c = 1, 2, 3
+# print(a, b, c)
+# a, b, c = "1,2,3".split(",")
+# print(a, b, c)
+# a, b, c = {"a", "b", "c", "a"}
+# print(a, b, c)
+
+#
+# # example for a bulian var
+# b = 65
+# a = 60 > b
+# print(a)
+
+
+# # example for split method
+# a = "hello, world"
+# print(a.split())
+# print(a.split("")) # will return an error
+
+
+# # example for refernce in python in list
+# def checking(a):
+#     a[0] = "Hello"
+#
+# a = [1, 2]
+# checking(a)
+# print(a)
+
+# #
+# a = [1, 2, 3]
+# print(a * 2) # will print [1, 2, 3, 1, 2, 3]
+
+# # example to inherit class
+# class Animal:
+#     def __init__(self, name):
+#         self.is_tail = True
+#         self.name = name
+#
+#
+# class Cat(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.is_noisi = True
+#
+#
+# miki = Cat("miki")
+# print(vars(miki))
+
+
+# # example for fibuncci by recurs
+# def fib(n):
+#     if n <= 1:
+#         return n
+#     return fib(n - 1) + fib(n - 2)
+#
+#
+# print(fib(4))
+#
+
+# # example for functions
+# def foo(x, y):
+#     def bar(a, b):
+#         return a * b
+#     return bar(x, y)
+# print(foo(100, 3))
+#
+#
+# from random import randint
+#
+# suduku = [0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0,
+#           0, 0, 0, 0, 0, 0, 0, 0, 0]
+#
+# for i in range(81):
+#     ran = randint(1, 9)
+#     for j in range(9):
+#         if suduku[i // 9 * 9 + j] == ran or suduku[10 * j + i % 9 - j] == ran or
+
+from random import randint
+from time import time
+
+sudoku = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+]
+while True:
+    for i in range(9):
+        for j in range(9):
+            flag = 1
+            while flag:
+                start_time = time()
+                ran = randint(1, 9)
+                flag = 0
+                for k in range(9):
+                    if sudoku[i][k] == ran or sudoku[k][j] == ran or sudoku[k // 3 + (i // 3) * 3][k % 3 + 3 * (j // 3)] == ran:
+                        flag = 1
+                        break
+                    else:
+                        flag = 0
+            sudoku[i][j] = ran
+            for u in range(9):
+                print(sudoku[u])
+            print("\n\n")
+            end_time = time()
+            total_time = end_time - start_time
+            print(total_time)
+
+
 

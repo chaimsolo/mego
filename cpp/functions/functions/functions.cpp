@@ -463,7 +463,7 @@ void main() {
 	}*/
 
 // exersices 42
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include <time.h>
 #define size 5
 
@@ -489,4 +489,136 @@ void main() {
 	printf("\n");
 	printingArr(arr, size);
 
+}*/
+
+// exersices 43
+
+/*#define SIZE 10
+//checking and returning the most common number
+void chackingTheCommonNumber(int arr[], int length) {
+	
+	int i, j, count, number, biggest = 0;
+
+
+	for (i = 0; i <= length; i++) {
+	    count = 0;
+
+		for (j = i; j <= length; j++) {
+			
+			if (arr[i] == arr[j]) {
+				count += 1;
+			}
+		}
+		if (count > biggest) {
+			biggest = count, number = arr[i];
+		}
+	}
+	printf("the most frequent element is %d with %d occoranses", number, biggest);
+}
+// creatin arr
+void main() {
+	int arr[SIZE] = { 1, 2, 3, 4, 3, 3, 7, 9, 4 };
+	
+    chackingTheCommonNumber(arr, SIZE);
+	
+}
+
+*/
+
+// exercises 49
+/*#define SIZE 7
+
+void main() {
+	int arr[7] = { 1, 2, 3, 4, 5, 6, 7 };
+	int i;
+	int* ptr;
+	int* ptr1;
+
+	ptr = &arr[0];
+	ptr += 6;
+
+	for (i = 0; i < SIZE; i++) {
+
+		printf("ptr of %d = %d.\n ", *ptr--, ptr);
+	}
+}
+*/
+
+// exercises 50
+/*
+#include<stdlib.h>
+#include<time.h>
+
+#define SIZE 7
+
+
+
+void main() {
+	// define random
+	srand(time(NULL));
+
+	//declear arr
+	int arr[SIZE] = { 1, 2, 3, 4, 5, 6, 7 };
+	
+	//declear vars
+	int i, randomIndex;
+    
+	//declear fointer
+	int* ptr;
+
+	for (i = 0; i < SIZE; i++) {
+		randomIndex = rand() % 7;
+
+		ptr = &arr[randomIndex];
+
+		printf("The chios random indexs arr now is %d in index %d\n", *ptr, randomIndex);
+	}
+}
+*/
+
+//exercises 51
+/*
+#include<stdio.h>
+
+void main() {
+	char name[] = { 'c', 'h', 'a', 'i', 'm', '\0' };
+	char name2[] = "chaim";
+
+	char* ptr;
+
+	ptr = &name[0];
+
+	int i;
+
+	for (i = 0; ; i++) {
+		
+		if (name[i] == '\0') {
+			break;
+		}
+		printf("%c", *ptr++);
+	}
+
+	
+
+}
+*/
+
+#define SIZE 7
+
+void main() {
+	int i = 0, number;
+	int arr[SIZE] = { 0 };
+
+	printf("Enter a number >>> ");
+	scanf_s("%d", &number);
+
+	for (i = 0; number != 0; i++) {
+		arr[i] = number % 10;
+		number /= 10;
+	}
+
+    
+	for (i = 0; i < SIZE; i++) {
+		printf("%d", arr[i]);
+	}
 }
